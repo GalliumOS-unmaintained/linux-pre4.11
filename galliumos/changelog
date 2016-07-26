@@ -1,0 +1,14 @@
+linux-image-4.4.6b-galliumos (1) xenon; urgency=medium
+
+  * New repo to clarify source history and provenance
+  * Vanilla, unpatched, kernel source from kernel.org archive
+    - https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.4.6.tar.xz
+  * This repo borrows some debian conventions, including a changelog
+    and patches, but see galliumos/NOTES for important differences
+  * changelog is parsed by build script
+    - KDEB_PKGVERSION ("1") is set from package version string
+    - LOCALVERSION ("-galliumos") could be parsed from package name
+    - Debian packaging only considers the first changelog entry, so it
+      is safe to change the package name and downrev the version string
+
+ -- reynhout <reynhout@galliumos.org>  Tue, 26 Jul 2016 16:52:24 +0000 

@@ -1,0 +1,11 @@
+## galliumos/NOTES
+
+This directory borrows some debian organizational rules.
+
+The kernel .gitignore file ignores "debian", "patches", and "series",
+so we rename them to "galliumos", "diffs", and "list".
+
+If we edited the kernel .gitignore file instead, we'd risk incomplete
+commits if a new version was untarred on top and restored the original
+ignore behaviour. So this is awkward, but safe.
+
