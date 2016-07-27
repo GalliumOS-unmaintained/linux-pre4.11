@@ -1,0 +1,6 @@
+linux-image-4.4.15-galliumos (1) xenon; urgency=medium
+
+  * Vanilla, unpatched, kernel source from kernel.org archive
+    - https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.4.15.tar.xz
+
+ -- reynhout <reynhout@galliumos.org>  Tue, 27 Jul 2016 12:15:22 +0000 
