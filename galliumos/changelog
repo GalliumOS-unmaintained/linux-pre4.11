@@ -1,0 +1,6 @@
+linux-4.7-galliumos (4.7-galliumos0) xenon; urgency=medium
+
+  * Vanilla, unpatched, kernel source from kernel.org archive
+    - https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.7.tar.xz
+
+ -- reynhout <reynhout@galliumos.org>  Tue, 16 Aug 2016 18:42:05 +0000
