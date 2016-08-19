@@ -1,4 +1,22 @@
-linux-4.7-galliumos (4.7-galliumos0) xenon; urgency=medium
+linux-4.7.0-galliumos (4.7.0-galliumos1) xenon; urgency=medium
+
+  * Re-add existing patches for GalliumOS to galliumos/diffs:
+    - increase-blkcg_max_pols.diff
+    - add-bfq.diff
+    - add-touchscreen-support-peppy-samus.diff
+    - add-kbd-backlight-module.diff
+    - prevent-mmcblk-rpmb-errors.diff
+    - suppress-pll-unlock-msg.diff
+  * Update existing patches for GalliumOS:
+    - add-aufs.diff (new version for kernel 4.7)
+    - suppress-tpm-error-msg.diff (relocation)
+  * Omit previous patches for GalliumOS
+    - add-elan-touchpad.diff (upstreamed in kernel 4.7)
+  * Add new patches for GalliumOS:
+    - add-samus-audio-support.diff
+      + from John Keeping https://lkml.org/lkml/2016/8/14/207
+
+linux-4.7.0-galliumos (4.7.0-galliumos0) xenon; urgency=medium
 
   * Vanilla, unpatched, kernel source from kernel.org archive
     - https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.7.tar.xz
