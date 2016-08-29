@@ -1,0 +1,6 @@
+linux-4.7.2-galliumos (4.7.2-galliumos0) xenon; urgency=medium
+
+  * Vanilla, unpatched, kernel source from kernel.org archive
+    - https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.7.2.tar.xz
+
+ -- reynhout <reynhout@galliumos.org>  Mon, 29 Aug 2016 21:26:37 +0000
