@@ -102,7 +102,6 @@ struct gpio_desc *acpi_node_get_gpiod(struct fwnode_handle *fwnode,
 
 int acpi_gpio_count(struct device *dev, const char *con_id);
 
-bool acpi_can_fallback_to_crs(struct acpi_device *adev, const char *con_id);
 #else
 static inline void acpi_gpiochip_add(struct gpio_chip *chip) { }
 static inline void acpi_gpiochip_remove(struct gpio_chip *chip) { }
@@ -130,11 +129,6 @@ static inline int acpi_gpio_count(struct device *dev, const char *con_id)
 	return -ENODEV;
 }
 
-static inline bool acpi_can_fallback_to_crs(struct acpi_device *adev,
-					    const char *con_id)
-{
-	return false;
-}
 #endif
 
 struct gpio_desc *of_get_named_gpiod_flags(struct device_node *np,
