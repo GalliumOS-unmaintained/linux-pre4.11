@@ -7,3 +7,4 @@ prevent-mmcblk-rpmb-errors.diff
 suppress-pll-unlock-msg.diff
 suppress-tpm-error-msg.diff
 add-samus-audio-support.diff
+revert-acpi-gpio-lookups-patch-10cf499.diff

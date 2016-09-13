@@ -1,0 +1,96 @@
+gpiolib: revert 10cf499 - tighten up ACPI legacy gpio lookups
+
+revert this commit as it breaks audio output on Baytrail
+ChromeOS devices using byt-max98090 codec
+
+Signed-off-by: Matt DeVillier <matt.devillier@gmail.com>
+
+
+diff --git a/drivers/gpio/gpiolib-acpi.c b/drivers/gpio/gpiolib-acpi.c
+index 2dc5258..f1af871 100644
+--- a/drivers/gpio/gpiolib-acpi.c
++++ b/drivers/gpio/gpiolib-acpi.c
+@@ -946,46 +946,3 @@ int acpi_gpio_count(struct device *dev, const char *con_id)
+ 	}
+ 	return count;
+ }
+-
+-struct acpi_crs_lookup {
+-	struct list_head node;
+-	struct acpi_device *adev;
+-	const char *con_id;
+-};
+-
+-static DEFINE_MUTEX(acpi_crs_lookup_lock);
+-static LIST_HEAD(acpi_crs_lookup_list);
+-
+-bool acpi_can_fallback_to_crs(struct acpi_device *adev, const char *con_id)
+-{
+-	struct acpi_crs_lookup *l, *lookup = NULL;
+-
+-	/* Never allow fallback if the device has properties */
+-	if (adev->data.properties || adev->driver_gpios)
+-		return false;
+-
+-	mutex_lock(&acpi_crs_lookup_lock);
+-
+-	list_for_each_entry(l, &acpi_crs_lookup_list, node) {
+-		if (l->adev == adev) {
+-			lookup = l;
+-			break;
+-		}
+-	}
+-
+-	if (!lookup) {
+-		lookup = kmalloc(sizeof(*lookup), GFP_KERNEL);
+-		if (lookup) {
+-			lookup->adev = adev;
+-			lookup->con_id = kstrdup(con_id, GFP_KERNEL);
+-			list_add_tail(&lookup->node, &acpi_crs_lookup_list);
+-		}
+-	}
+-
+-	mutex_unlock(&acpi_crs_lookup_lock);
+-
+-	return lookup &&
+-		((!lookup->con_id && !con_id) ||
+-		 (lookup->con_id && con_id &&
+-		  strcmp(lookup->con_id, con_id) == 0));
+-}
+diff --git a/drivers/gpio/gpiolib.c b/drivers/gpio/gpiolib.c
+index be74bd3..024229d 100644
+--- a/drivers/gpio/gpiolib.c
++++ b/drivers/gpio/gpiolib.c
+@@ -2382,8 +2382,6 @@ static struct gpio_desc *acpi_find_gpio(struct device *dev,
+ 
+ 	/* Then from plain _CRS GPIOs */
+ 	if (IS_ERR(desc)) {
+-		if (!acpi_can_fallback_to_crs(adev, con_id))
+-			return ERR_PTR(-ENOENT);
+ 
+ 		desc = acpi_get_gpiod_by_index(adev, NULL, idx, &info);
+ 		if (IS_ERR(desc))
+diff --git a/drivers/gpio/gpiolib.h b/drivers/gpio/gpiolib.h
+index 2d9ea5e..4791829 100644
+--- a/drivers/gpio/gpiolib.h
++++ b/drivers/gpio/gpiolib.h
+@@ -102,7 +102,6 @@ struct gpio_desc *acpi_node_get_gpiod(struct fwnode_handle *fwnode,
+ 
+ int acpi_gpio_count(struct device *dev, const char *con_id);
+ 
+-bool acpi_can_fallback_to_crs(struct acpi_device *adev, const char *con_id);
+ #else
+ static inline void acpi_gpiochip_add(struct gpio_chip *chip) { }
+ static inline void acpi_gpiochip_remove(struct gpio_chip *chip) { }
+@@ -130,11 +129,6 @@ static inline int acpi_gpio_count(struct device *dev, const char *con_id)
+ 	return -ENODEV;
+ }
+ 
+-static inline bool acpi_can_fallback_to_crs(struct acpi_device *adev,
+-					    const char *con_id)
+-{
+-	return false;
+-}
+ #endif
+ 
+ struct gpio_desc *of_get_named_gpiod_flags(struct device_node *np,

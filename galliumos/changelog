@@ -1,3 +1,12 @@
+linux-4.7.2-galliumos (4.7.2-galliumos3) xenon; urgency=medium
+
+  * Revert 10cf499 - tighten up ACPI legacy gpio lookups
+    - revert this commit as it breaks audio output on Baytrail
+      ChromeOS devices using byt-max98090 codec
+    - upstream: https://github.com/torvalds/linux/commit/10cf4899f8affa468b9140f377857bfe3f563012
+
+ -- MrChromebox <mrchromebox@gmail.com>  Tue, 03 Sep 2016 19:22:20 +0000
+
 linux-4.7.2-galliumos (4.7.2-galliumos2) xenon; urgency=medium
 
   * Enable Braswell keyboard and touchscreen
