@@ -1,3 +1,14 @@
+linux-4.7.2-galliumos (4.7.2-galliumos4) xenon; urgency=medium
+
+  * New patch: allow-gpio-lookup-fallback-by-boot-param.diff
+    - Adds kernel boot param gpiolib.acpi_lookup_can_try_crs.
+      + If set (=1), ACPI GPIO lookups can fallback to _CRS
+      + Bay Trail byt-max98090 audio driver requires _CRS lookups
+  * Disable patch: revert-acpi-gpio-lookups-patch-10cf499.diff
+    - Superseded by previous
+
+ -- reynhout <reynhout@galliumos.org>  Wed, 21 Sep 2016 16:23:58 +0000
+
 linux-4.7.2-galliumos (4.7.2-galliumos3) xenon; urgency=medium
 
   * Revert 10cf499 - tighten up ACPI legacy gpio lookups
