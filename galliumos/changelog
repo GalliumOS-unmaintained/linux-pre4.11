@@ -1,3 +1,19 @@
+linux-4.7.6-galliumos (4.7.6-galliumos1) xenon; urgency=medium
+
+  * Import 4.7.2 patches for GalliumOS to galliumos/diffs:
+    - increase-blkcg_max_pols.diff
+    - add-bfq.diff
+    - add-touchscreen-support-peppy-samus.diff
+    - add-kbd-backlight-module.diff
+    - prevent-mmcblk-rpmb-errors.diff
+    - suppress-pll-unlock-msg.diff
+    - add-aufs.diff
+    - suppress-tpm-error-msg.diff
+    - add-samus-audio-support.diff
+    - allow-gpio-lookup-fallback-by-boot-param.diff
+
+ -- reynhout <reynhout@galliumos.org>  Tue, 04 Oct 2016 22:15:43 +0000
+
 linux-4.7.6-galliumos (4.7.6-galliumos0) xenon; urgency=medium
 
   * Vanilla, unpatched, kernel source from kernel.org archive
