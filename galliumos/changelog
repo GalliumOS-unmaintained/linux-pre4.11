@@ -1,0 +1,6 @@
+linux-4.7.6-galliumos (4.7.6-galliumos0) xenon; urgency=medium
+
+  * Vanilla, unpatched, kernel source from kernel.org archive
+    - https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.7.6.tar.xz
+
+ -- reynhout <reynhout@galliumos.org>  Tue, 04 Oct 2016 22:10:00 +0000
