@@ -1,3 +1,11 @@
+linux-4.7.2-galliumos (4.7.2-galliumos5) xenon; urgency=high
+
+  * New patch: mitigate-cve-2016-5195.diff
+    - Mitigates COW race for write access
+    - upstream: https://github.com/torvalds/linux/commit/19be0eaffa3ac7d8eb6784ad9bdbc7d67ed8e619
+
+ -- reynhout <reynhout@galliumos.org>  Fri, 21 Oct 2016 20:52:50 +0000
+
 linux-4.7.2-galliumos (4.7.2-galliumos4) xenon; urgency=medium
 
   * New patch: allow-gpio-lookup-fallback-by-boot-param.diff
