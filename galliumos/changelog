@@ -1,3 +1,11 @@
+linux-4.7.2-galliumos (4.7.2-galliumos6) xenon; urgency=medium
+
+  * New patch: fix-celes-touchpad.diff
+    - Adds support for CELES touchpad
+    - Thanks to jonas.jonaias@gmail.com
+
+ -- reynhout <reynhout@galliumos.org>  Sat, 22 Oct 2016 19:21:44 +0000
+
 linux-4.7.2-galliumos (4.7.2-galliumos5) xenon; urgency=high
 
   * New patch: mitigate-cve-2016-5195.diff
