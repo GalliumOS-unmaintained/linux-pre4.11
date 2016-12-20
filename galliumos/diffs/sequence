@@ -8,5 +8,4 @@ suppress-pll-unlock-msg.diff
 suppress-tpm-error-msg.diff
 add-samus-audio-support.diff
 allow-gpio-lookup-fallback-by-boot-param.diff
-mitigate-cve-2016-5195.diff
 fix-celes-touchpad.diff
