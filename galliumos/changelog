@@ -1,48 +1,6 @@
-linux-4.7.2-galliumos (4.7.2-galliumos6) xenon; urgency=medium
-
-  * New patch: fix-celes-touchpad.diff
-    - Adds support for CELES touchpad
-    - Thanks to jonas.jonaias@gmail.com
-
- -- reynhout <reynhout@galliumos.org>  Sat, 22 Oct 2016 19:21:44 +0000
-
-linux-4.7.2-galliumos (4.7.2-galliumos5) xenon; urgency=high
-
-  * New patch: mitigate-cve-2016-5195.diff
-    - Mitigates COW race for write access
-    - upstream: https://github.com/torvalds/linux/commit/19be0eaffa3ac7d8eb6784ad9bdbc7d67ed8e619
-
- -- reynhout <reynhout@galliumos.org>  Fri, 21 Oct 2016 20:52:50 +0000
-
-linux-4.7.2-galliumos (4.7.2-galliumos4) xenon; urgency=medium
-
-  * New patch: allow-gpio-lookup-fallback-by-boot-param.diff
-    - Adds kernel boot param gpiolib.acpi_lookup_can_try_crs.
-      + If set (=1), ACPI GPIO lookups can fallback to _CRS
-      + Bay Trail byt-max98090 audio driver requires _CRS lookups
-  * Disable patch: revert-acpi-gpio-lookups-patch-10cf499.diff
-    - Superseded by previous
-
- -- reynhout <reynhout@galliumos.org>  Wed, 21 Sep 2016 16:23:58 +0000
-
-linux-4.7.2-galliumos (4.7.2-galliumos3) xenon; urgency=medium
-
-  * Revert 10cf499 - tighten up ACPI legacy gpio lookups
-    - revert this commit as it breaks audio output on Baytrail
-      ChromeOS devices using byt-max98090 codec
-    - upstream: https://github.com/torvalds/linux/commit/10cf4899f8affa468b9140f377857bfe3f563012
-
- -- MrChromebox <mrchromebox@gmail.com>  Tue, 03 Sep 2016 19:22:20 +0000
-
-linux-4.7.2-galliumos (4.7.2-galliumos2) xenon; urgency=medium
-
-  * Enable Braswell keyboard and touchscreen
-    - Set CONFIG_PINCTRL_CHERRYVIEW=y (was =m)
-
- -- reynhout <reynhout@galliumos.org>  Sat, 10 Sep 2016 00:35:16 +0000
-
-linux-4.7.2-galliumos (4.7.2-galliumos1) xenon; urgency=medium
-
+linux-4.7.10-galliumos (4.7.10-galliumos0) xenon; urgency=medium
+  * Linux imported from kernel.org archive
+    - https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.7.10.tar.xz
   * Import 4.7.0 patches for GalliumOS to galliumos/diffs:
     - increase-blkcg_max_pols.diff
     - add-bfq.diff
@@ -52,14 +10,10 @@ linux-4.7.2-galliumos (4.7.2-galliumos1) xenon; urgency=medium
     - suppress-pll-unlock-msg.diff
     - add-aufs.diff
     - suppress-tpm-error-msg.diff
-  * Update SAMUS audio patch to v2
-    - add-samus-audio-support.diff
+    - add-samus-audio-support.diff	
+    - add-elan-touchpad.diff
+    - allow-gpio-lookup-fallback-by-boot-param.diff
+    - fix-celes-touchpad.diff
+  * Disable Patch: mitigate-cve-2016-5195 now in mainline; removed diff
 
- -- reynhout <reynhout@galliumos.org>  Mon, 29 Aug 2016 21:43:22 +0000
-
-linux-4.7.2-galliumos (4.7.2-galliumos0) xenon; urgency=medium
-
-  * Vanilla, unpatched, kernel source from kernel.org archive
-    - https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.7.2.tar.xz
-
- -- reynhout <reynhout@galliumos.org>  Mon, 29 Aug 2016 21:26:37 +0000
+ -- cramaker <cramaker@linux.com>  Wed, 21 Dec 2016 02:25:31 +0000
