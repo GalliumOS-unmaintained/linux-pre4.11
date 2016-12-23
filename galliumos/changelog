@@ -1,4 +1,4 @@
-linux-4.7.10-galliumos (4.7.10-galliumos0) xenon; urgency=medium
+linux-4.7.10-galliumos (4.7.10-galliumos1) xenon; urgency=medium
   * Linux imported from kernel.org archive
     - https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.7.10.tar.xz
   * Import 4.7.0 patches for GalliumOS to galliumos/diffs:
