@@ -1,0 +1,13 @@
+diff --git a/include/linux/blkdev.h b/include/linux/blkdev.h
+index c47c358..1047d99 100644
+--- a/include/linux/blkdev.h
++++ b/include/linux/blkdev.h
+@@ -45,7 +45,7 @@ struct pr_ops;
+  * Maximum number of blkcg policies allowed to be registered concurrently.
+  * Defined here to simplify include dependency.
+  */
+-#define BLKCG_MAX_POLS		2
++#define BLKCG_MAX_POLS		3
+ 
+ typedef void (rq_end_io_fn)(struct request *, int);
+ 
