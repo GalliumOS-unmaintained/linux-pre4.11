@@ -1,0 +1,5 @@
+linux-4.9-galliumos (4.9-galliumos0) xenon; urgency=medium
+  * Linux imported from kernel.org archive
+    - https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.9.tar.xz
+
+ -- reynhout <reynhout@galliumos.org>  Sat, 24 Dec 2016 19:29:30 +0000
