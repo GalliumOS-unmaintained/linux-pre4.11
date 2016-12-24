@@ -1,0 +1,58 @@
+commit 0d248d10353597bdb05a14436f448c8998a50c93
+Author: Jonas Dourado <jonas.jonaias@gmail.com>
+Date:   Sat Oct 22 12:51:58 2016 -0200
+
+    Fix Samsung Chromebook 3 touchpad
+    
+    Added Chromebook 3 platform specific touchpad support.
+
+diff --git a/drivers/input/touchscreen/atmel_mxt_ts.c b/drivers/input/touchscreen/atmel_mxt_ts.c
+index 5af7907..6cf8648 100644
+--- a/drivers/input/touchscreen/atmel_mxt_ts.c
++++ b/drivers/input/touchscreen/atmel_mxt_ts.c
+@@ -2471,6 +2471,29 @@ static struct mxt_acpi_platform_data samus_platform_data[] = {
+ 	{ }
+ };
+ 
++static unsigned int celes_tp_buttons[] = {
++	KEY_RESERVED,
++	KEY_RESERVED,
++	KEY_RESERVED,
++	BTN_LEFT
++};
++
++static struct mxt_acpi_platform_data celes_platform_data[] = {
++	{
++		/* Touchpad */
++		.hid	= "ATML0000",
++		.pdata	= {
++			.t19_num_keys	= ARRAY_SIZE(celes_tp_buttons),
++			.t19_keymap	= celes_tp_buttons,
++		},
++	},
++	{
++		/* Touchscreen */
++		.hid	= "ATML0001",
++	},
++	{ }
++};
++
+ static unsigned int chromebook_tp_buttons[] = {
+ 	KEY_RESERVED,
+ 	KEY_RESERVED,
+@@ -2507,6 +2530,15 @@ static const struct dmi_system_id mxt_dmi_table[] = {
+ 		.driver_data = samus_platform_data,
+ 	},
+ 	{
++		/* Samsung Chromebook 3 */
++		.ident = "Samsung Chromebook 3",
++		.matches = {
++			DMI_MATCH(DMI_SYS_VENDOR, "GOOGLE"),
++			DMI_MATCH(DMI_PRODUCT_NAME, "Celes"),
++		},
++		.driver_data = celes_platform_data,
++	},
++	{
+ 		/* Other Google Chromebooks */
+ 		.ident = "Chromebook",
+ 		.matches = {

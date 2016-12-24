@@ -1,0 +1,19 @@
+linux-4.7.10-galliumos (4.7.10-galliumos1) xenon; urgency=medium
+  * Linux imported from kernel.org archive
+    - https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.7.10.tar.xz
+  * Import 4.7.0 patches for GalliumOS to galliumos/diffs:
+    - increase-blkcg_max_pols.diff
+    - add-bfq.diff
+    - add-touchscreen-support-peppy-samus.diff
+    - add-kbd-backlight-module.diff
+    - prevent-mmcblk-rpmb-errors.diff
+    - suppress-pll-unlock-msg.diff
+    - add-aufs.diff
+    - suppress-tpm-error-msg.diff
+    - add-samus-audio-support.diff	
+    - add-elan-touchpad.diff
+    - allow-gpio-lookup-fallback-by-boot-param.diff
+    - fix-celes-touchpad.diff
+  * Disable Patch: mitigate-cve-2016-5195 now in mainline; removed diff
+
+ -- cramaker <cramaker@linux.com>  Wed, 21 Dec 2016 02:25:31 +0000
