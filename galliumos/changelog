@@ -1,16 +1,19 @@
 linux-4.9-galliumos (4.9-galliumos1) xenon; urgency=medium
 
   * Add GalliumOS patches, ported to 4.9
-    - increase-blkcg_max_pols.diff
     - add-bfq-4.9.diff
     - add-touchscreen-support-peppy-samus.diff
     - add-kbd-backlight-module.diff
     - add-aufs-4.9.diff
     - prevent-mmcblk-rpmb-errors.diff
     - suppress-pll-unlock-msg.diff
-    - suppress-tpm-error-msg.diff (no longer needed?)
+    - suppress-tpm-error-msg.diff (possibly no longer required)
     - allow-gpio-lookup-fallback-by-boot-param.diff
     - fix-celes-touchpad.diff
+  * Removed GalliumOS patches
+    - increase-blkcg_max_pols.diff (equivalent patch included in bfq-4.9)
+    - add-elan-touchpad.diff (now included in mainline)
+    - add-samus-audio-support.diff (now included in mainline)
 
  -- reynhout <reynhout@galliumos.org>  Sat, 24 Dec 2016 19:29:30 +0000
 
