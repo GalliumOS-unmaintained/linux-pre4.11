@@ -7,7 +7,7 @@ linux-4.9-galliumos (4.9-galliumos1) xenon; urgency=medium
     - add-aufs-4.9.diff
     - prevent-mmcblk-rpmb-errors.diff
     - suppress-pll-unlock-msg.diff
-    - suppress-tpm-error-msg.diff (possibly no longer required)
+    - suppress-tpm-error-msg.diff
     - allow-gpio-lookup-fallback-by-boot-param.diff
     - fix-celes-touchpad.diff
   * Removed GalliumOS patches

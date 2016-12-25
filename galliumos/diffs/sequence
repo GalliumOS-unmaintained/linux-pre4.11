@@ -4,7 +4,6 @@ add-kbd-backlight-module.diff
 add-aufs-4.9.diff
 prevent-mmcblk-rpmb-errors.diff
 suppress-pll-unlock-msg.diff
-# suppress tpm no longer necessary?
-#suppress-tpm-error-msg.diff
+suppress-tpm-error-msg.diff
 allow-gpio-lookup-fallback-by-boot-param.diff
 fix-celes-touchpad.diff
