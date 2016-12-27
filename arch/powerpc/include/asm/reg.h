@@ -355,6 +355,7 @@
 #define     LPCR_PECE0		ASM_CONST(0x0000000000004000)	/* ext. exceptions can cause exit */
 #define     LPCR_PECE1		ASM_CONST(0x0000000000002000)	/* decrementer can cause exit */
 #define     LPCR_PECE2		ASM_CONST(0x0000000000001000)	/* machine check etc can cause exit */
+#define     LPCR_PECE_HVEE	ASM_CONST(0x0000400000000000)	/* P9 Wakeup on HV interrupts */
 #define   LPCR_MER		ASM_CONST(0x0000000000000800)	/* Mediated External Exception */
 #define   LPCR_MER_SH		11
 #define   LPCR_TC		ASM_CONST(0x0000000000000200)	/* Translation control */
@@ -737,6 +738,7 @@
 #define   MMCR0_FCHV	0x00000001UL /* freeze conditions in hypervisor mode */
 #define SPRN_MMCR1	798
 #define SPRN_MMCR2	785
+#define SPRN_UMMCR2	769
 #define SPRN_MMCRA	0x312
 #define   MMCRA_SDSYNC	0x80000000UL /* SDAR synced with SIAR */
 #define   MMCRA_SDAR_DCACHE_MISS 0x40000000UL
