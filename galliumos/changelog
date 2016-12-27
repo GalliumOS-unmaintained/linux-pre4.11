@@ -1,3 +1,23 @@
+linux-4.8.0-galliumos (4.8.0-galliumos0+dev1) xenon; urgency=medium
+
+  * Add GalliumOS patches, updated for 4.8:
+    - add-aufs-4.8.diff
+    - add-bfq-4.8.0-v8r4.diff
+    - add-touchscreen-support-peppy-samus.diff
+    - add-kbd-backlight-module.diff
+    - prevent-mmcblk-rpmb-errors.diff
+    - suppress-pll-unlock-msg.diff
+    - suppress-tpm-error-msg.diff
+    - add-samus-audio-support.diff
+    - allow-gpio-lookup-fallback-by-boot-param.diff 
+    - fix-celes-touchpad.diff
+  * Drop GalliumOS patches:
+    - increase-blkcg_max_pols.diff (equiv patch in mainline)
+    - add-elan-touchpad.diff (equiv patch in mainline)
+  * Add apply_all script to do the needful
+
+ -- reynhout <reynhout@galliumos.org>  Tue, 27 Dec 2016 20:12:14 +0000
+
 linux-4.8.0-galliumos (4.8.0-galliumos0) xenon; urgency=medium
 
   * kernel source imported from kernel.org archive

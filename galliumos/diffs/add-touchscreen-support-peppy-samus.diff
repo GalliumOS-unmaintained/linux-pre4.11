@@ -1,0 +1,55 @@
+diff --git a/drivers/input/touchscreen/atmel_mxt_ts.c b/drivers/input/touchscreen/atmel_mxt_ts.c
+index 5af7907..de9fbf4 100644
+--- a/drivers/input/touchscreen/atmel_mxt_ts.c
++++ b/drivers/input/touchscreen/atmel_mxt_ts.c
+@@ -2471,6 +2471,14 @@ static struct mxt_acpi_platform_data samus_platform_data[] = {
+ 	{ }
+ };
+ 
++static struct mxt_acpi_platform_data peppy_platform_data[] = {
++	{
++		/* Touchscreen */
++		.hid	= "ATML0001",
++	},
++	{ }
++};
++
+ static unsigned int chromebook_tp_buttons[] = {
+ 	KEY_RESERVED,
+ 	KEY_RESERVED,
+@@ -2501,12 +2509,19 @@ static const struct dmi_system_id mxt_dmi_table[] = {
+ 		/* 2015 Google Pixel */
+ 		.ident = "Chromebook Pixel 2",
+ 		.matches = {
+-			DMI_MATCH(DMI_SYS_VENDOR, "GOOGLE"),
+ 			DMI_MATCH(DMI_PRODUCT_NAME, "Samus"),
+ 		},
+ 		.driver_data = samus_platform_data,
+ 	},
+ 	{
++		/* Acer C720P Chromebook */
++		.ident = "Acer C720",
++		.matches = {
++			DMI_MATCH(DMI_PRODUCT_NAME, "Peppy"),
++		},
++		.driver_data = peppy_platform_data,
++	},
++	{
+ 		/* Other Google Chromebooks */
+ 		.ident = "Chromebook",
+ 		.matches = {
+@@ -2514,6 +2529,14 @@ static const struct dmi_system_id mxt_dmi_table[] = {
+ 		},
+ 		.driver_data = chromebook_platform_data,
+ 	},
++	{
++		/* Other Google Chromebooks - upstream coreboot */
++		.ident = "Chromebook",
++		.matches = {
++			DMI_MATCH(DMI_SYS_VENDOR, "Google"),
++		},
++		.driver_data = chromebook_platform_data,
++	},
+ 	{ }
+ };
+ 
