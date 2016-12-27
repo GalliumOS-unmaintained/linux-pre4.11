@@ -1,4 +1,4 @@
-linux-4.9-galliumos (4.9-galliumos1) xenon; urgency=medium
+linux-4.9-galliumos (4.9-galliumos0+dev1) xenon; urgency=medium
 
   * Add GalliumOS patches, ported to 4.9
     - add-bfq-4.9.diff
