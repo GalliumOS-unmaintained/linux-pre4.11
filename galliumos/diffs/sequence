@@ -10,3 +10,4 @@ suppress-tpm-error-msg.diff
 allow-gpio-lookup-fallback-by-boot-param.diff
 fix-celes-touchpad.diff
 increase-cherryview-num-irqs.diff
+fix-synaptics-trackpad-power-state.diff

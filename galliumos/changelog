@@ -1,3 +1,9 @@
+linux-4.9.0-galliumos (4.9.0-galliumos2) xenon; urgency=medium
+
+  * New patch: fix-synaptics-trackpad-power-state.diff
+
+ -- reynhout <reynhout@galliumos.org>  Sat, 07 Jan 2017 21:48:11 +0000
+
 linux-4.9.0-galliumos (4.9.0-galliumos1) xenon; urgency=medium
 
   * GalliumOS patches, ported to 4.9.0
