@@ -1,3 +1,10 @@
+linux-4.9.2-galliumos (4.9.2-galliumos2) xenon; urgency=medium
+
+  * Rebase on upstream 4.9.2
+    - https://cdn.kernel.org/pub/linux/kernel/v4.x/patch-4.9.2.xz
+
+ -- reynhout <reynhout@galliumos.org>  Wed, 11 Jan 2017 22:25:38 +0000
+
 linux-4.9.0-galliumos (4.9.0-galliumos2) xenon; urgency=medium
 
   * New patch: fix-synaptics-trackpad-power-state.diff
