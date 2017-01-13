@@ -1,4 +1,10 @@
-linux-4.8.0-galliumos (4.8.17-galliumos1) xenon; urgency=medium
+linux-4.8.17-galliumos (4.8.17-galliumos2) xenon; urgency=medium
+
+  * remove patch: add-kbd-backlight-module.diff, not needed in 4.8
+
+ -- reynhout <reynhout@galliumos.org>  Fri, 13 Jan 2017 00:55:14 +0000
+
+linux-4.8.17-galliumos (4.8.17-galliumos1) xenon; urgency=medium
 
   * Rebase on upstream 4.8.17
     - https://cdn.kernel.org/pub/linux/kernel/v4.x/patch-4.8.17.xz
