@@ -1,4 +1,4 @@
-linux-4.8.0-galliumos (4.8.0-galliumos0+dev1) xenon; urgency=medium
+linux-4.8.0-galliumos (4.8.0-galliumos1) xenon; urgency=medium
 
   * Add GalliumOS patches, updated for 4.8:
     - add-aufs-4.8.diff
