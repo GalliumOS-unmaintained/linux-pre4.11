@@ -1,3 +1,21 @@
+linux-4.9.4-galliumos (4.9.4-galliumos1) xenon; urgency=medium
+
+  * Rebase on upstream 4.9.4
+  * Drop patch: add-kbd-backlight-module.diff (not needed in 4.9)
+  * Update kernel config for current keyboard backlight code
+  * New patch: add-plbossart-experimental-codecs.diff
+    - snapshot/diff of plbossart experimental/codecs branch @ e1c14d3
+      - updates cht_bsw_rt5645 cht_bsw_max98090_ti
+      - updates skl_nau88l25_max98357a skl_nau88l25_ssm4567
+  * Update kernel config for plbossart patch
+  * Add wip kernel config for Skylake audio
+    - skl_nau88l25_max98357a (LARS, others?)
+  * Add secondary kernel config for Braswell audio
+    - cht-bsw-max98090 (CYAN)
+    - cht-bsw-rt5645 (most/all others)
+
+ -- reynhout <reynhout@galliumos.org>  Mon, 16 Jan 2017 02:54:49 +0000
+
 linux-4.9.0-galliumos (4.9.0-galliumos2) xenon; urgency=medium
 
   * New patch: fix-synaptics-trackpad-power-state.diff
