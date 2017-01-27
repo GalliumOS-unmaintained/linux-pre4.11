@@ -9,3 +9,4 @@ suppress-tpm-error-msg.diff
 add-samus-audio-support.diff
 allow-gpio-lookup-fallback-by-boot-param.diff
 fix-celes-touchpad.diff
+fix-synaptics-trackpad-power-state.diff

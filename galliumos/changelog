@@ -1,3 +1,9 @@
+linux-4.8.17-galliumos (4.8.17-galliumos3) xenon; urgency=medium
+
+  * add patch: fix-synaptics-trackpad-power-state.diff
+
+ -- reynhout <reynhout@galliumos.org>  Fri, 27 Jan 2017 02:31:31 +0000
+
 linux-4.8.17-galliumos (4.8.17-galliumos2) xenon; urgency=medium
 
   * remove patch: add-kbd-backlight-module.diff, not needed in 4.8
