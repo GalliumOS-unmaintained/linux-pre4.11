@@ -10,3 +10,4 @@ add-samus-audio-support.diff
 allow-gpio-lookup-fallback-by-boot-param.diff
 fix-celes-touchpad.diff
 fix-synaptics-trackpad-power-state.diff
+mitigate-CVE-2017-6074-dccp-double-free.diff
