@@ -1,3 +1,11 @@
+linux-4.9.16-galliumos (4.9.16-galliumos1) xenon; urgency=medium
+
+  * remove patches already present in 4.9.16:
+    - mitigate-CVE-2017-6074-dccp-double-free.diff
+    - hdmi-codec.h from plbossart tree
+
+ -- reynhout <reynhout@galliumos.org>  Tue, 21 Mar 2017 02:43:46 +0000
+
 linux-4.9.4-galliumos (4.9.4-galliumos2) xenon; urgency=medium
 
   * add patch: mitigate-CVE-2017-6074-dccp-double-free.diff
