@@ -11,4 +11,3 @@ fix-celes-touchpad.diff
 increase-cherryview-num-irqs.diff
 fix-synaptics-trackpad-power-state.diff
 add-plbossart-experimental-codecs.diff
-mitigate-CVE-2017-6074-dccp-double-free.diff
