@@ -2128,25 +2128,6 @@ index 67be244..1c8f9e1 100644
  
  /**
   * struct snd_dmaengine_pcm_config - Configuration data for dmaengine based PCM
-diff --git a/include/sound/hdmi-codec.h b/include/sound/hdmi-codec.h
-index 530c57b..915c435 100644
---- a/include/sound/hdmi-codec.h
-+++ b/include/sound/hdmi-codec.h
-@@ -36,10 +36,10 @@ struct hdmi_codec_daifmt {
- 		HDMI_AC97,
- 		HDMI_SPDIF,
- 	} fmt;
--	int bit_clk_inv:1;
--	int frame_clk_inv:1;
--	int bit_clk_master:1;
--	int frame_clk_master:1;
-+	unsigned int bit_clk_inv:1;
-+	unsigned int frame_clk_inv:1;
-+	unsigned int bit_clk_master:1;
-+	unsigned int frame_clk_master:1;
- };
- 
- /*
 diff --git a/include/sound/rt5514.h b/include/sound/rt5514.h
 new file mode 100644
 index 0000000..ef18494
