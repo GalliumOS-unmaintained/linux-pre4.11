@@ -1,3 +1,19 @@
+linux-4.10.0-galliumos (4.10.0-galliumos1) xenon; urgency=medium
+
+  * GalliumOS patches, updated for 4.10.0
+    - add-bfq-4.10.diff
+    - add-aufs-4.10.diff
+    - add-touchscreen-support-peppy-samus.diff
+    - add-kbd-backlight-module.diff
+    - prevent-mmcblk-rpmb-errors.diff
+    - suppress-pll-unlock-msg.diff
+    - suppress-tpm-error-msg.diff
+    - allow-gpio-lookup-fallback-by-boot-param.diff
+    - fix-celes-touchpad.diff
+    - increase-cherryview-num-irqs.diff
+
+ -- reynhout <reynhout@galliumos.org>  Wed, 22 Mar 2017 03:22:46 +0000
+
 linux-4.10.0-galliumos (4.10.0-galliumos0) xenon; urgency=medium
 
   * Linux imported from kernel.org archive
