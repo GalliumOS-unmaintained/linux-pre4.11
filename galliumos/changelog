@@ -1,3 +1,9 @@
+linux-4.10.5-galliumos (4.10.5-galliumos1) xenon; urgency=medium
+
+  * propagate GalliumOS kernel config to braswell profile; update for 4.10.5
+
+ -- reynhout <reynhout@galliumos.org>  Wed, 22 Mar 2017 19:16:39 +0000
+
 linux-4.10.0-galliumos (4.10.0-galliumos1) xenon; urgency=medium
 
   * GalliumOS patches, updated for 4.10.0
