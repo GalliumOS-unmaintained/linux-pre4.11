@@ -1,3 +1,10 @@
+linux-4.10.5-galliumos (4.10.5-galliumos2) xenon; urgency=medium
+
+  * add kernel config for F2FS filesystems per #340
+  * add kernel config for IT87 chromebox superIO temp sensors
+
+ -- reynhout <reynhout@galliumos.org>  Thu, 20 Apr 2017 17:51:09 +0000
+
 linux-4.10.5-galliumos (4.10.5-galliumos1) xenon; urgency=medium
 
   * propagate GalliumOS kernel config to braswell profile; update for 4.10.5
